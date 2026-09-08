@@ -15,11 +15,23 @@ public class EVA_5_PASO_PARAMETROS {
         System.out.println("Valor de i = "+ i);
         incrementar(i);
         System.out.println("Valor de i(despues de incrementar) = "+ i);
+        // Ahora paso por referencia
+        Prueba prueba = new Prueba();
+        System.out.println("Valor de prueba.y = "+ i);
+        incrementarObj(prueba);
+        System.out.println("Valor de prueba.y (despues de incrementar) = "+ prueba.y);
  
     }
     
     public static void incrementar(int valor){ // Paso por valor (recibo una copia)
         valor++;
     }
+    public static void incrementarObj(Prueba objeto){
+        objeto.y++;
+    }
     
+}
+
+class Prueba {
+    int y = 5;
 }
